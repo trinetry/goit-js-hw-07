@@ -30,10 +30,10 @@ function onSelectImage(event) {
         <img src="${galleryItem.original}" width="800" height="600">
     `, {
         onShow() {
-            document.body.addEventListener("keydown", onEscape)
+            window.addEventListener("keydown", onEscape)
         },
         onClose() {
-            document.body.removeEventListener("keydown", onEscape)
+            window.removeEventListener("keydown", onEscape)
         }
     })
     instance.show();
